@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>求和</title>
+    <style>
+        body{color:#999;font:12px/1.5 Tahoma;}
+        #outer{width:500px;margin:0 auto;}
+        #outer input{padding:3px;border:1px solid #ccc;font-family:inherit;width:220px;margin-right:10px;}
+        .sum{font-size:30px;color:red;}
+    </style>
 </head>
 <body>
-
+<div id="outer">
+    <label><input type="text" value="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15" /><span>输入数字求和，数字之间用半角","号分隔</span></label>
+    <p><button>求和</button></p>
+    <strong class="sum"></strong>
+</div>
 </body>
+<script>
+    var btn=document.getElementsByTagName("button")[0];
+    btn.onclick=function () {
+        var val=document.getElementById("outer").getElementsByTagName("input")[0].value,
+            res=val.split(","),
+            all=0;
+            for(var i=0;i<res.length;i++){
+                all+=parseInt(res[i])
+            }
+        alert(all)
+    }
+</script>
 </html>
