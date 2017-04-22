@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片列表：鼠标移入/移出改变图片透明度</title>
+    <style>
+        ul,li{margin:0;padding:0;list-style-type:none;}
+        #imgList{width:500px;overflow:hidden;zoom:1;border:1px solid #333;margin:0 auto;padding:0 0 10px 10px;}
+        #imgList li{float:left;width:128px;height:128px;border:1px solid #ccc;margin:10px 10px 0 0;}
+        #imgList li img{float:left;opacity:0.3;cursor:crosshair;filter:alpha(opacity=30);}
+        #imgList li.current img{opacity:1;filter:alpha(opacity=100);}
+
+    </style>
+</head>
+<body>
+<ul id="imgList">
+    <li><img src="images/3a0db2c8b564ba3a09bc83c8471de5bc.jpg" /></li>
+    <li><img src="images/08d24f7fc40fd588607926835c5e72c6.jpg" alt=""></li>
+    <li><img src="images/9a012e3dc83aa0a14ab05b54a9069f94.png" alt=""></li>
+    <li><img src="images/07c93e4f1c0ccdfe91cda1d6b67abeda.gif" alt=""></li>
+    <li><img src="images/7256d7863ebac878b784023695c75a36.png" alt=""></li>
+    <li><img src="images/b2ca71fc902c7a62f15d0830b88f8a2b.png" alt=""></li>
+</ul>
+<script>
+    var li=document.getElementById("imgList").getElementsByTagName("li");
+    for (var i = 0; i < li.length; i++)
+    {
+        li[i].onmouseover = function ()
+        {
+            this.className = "current"
+        };
+        li[i].onmouseout = function ()
+        {
+            this.className = ""
+        }
+    }
+
+</script>
+</body>
+</html>
