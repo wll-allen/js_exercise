@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background: red;
+            margin: 200px auto;
+            animation: gogo 4s 0s ease-in;
+        }
+        @keyframes gogo{
+            0%{
+                transform: perspective(0px)
+            }
+            25%{
+                transform: perspective(400px) rotateX(180deg) rotateY(0deg);
+            }
+            50%{
+                transform: perspective(400px) rotateX(180deg) rotateY(180deg);
+            }
+            75%{
+                transform: perspective(400px) rotateX(0deg) rotateY(180deg);
+            }
+            100%{
+                transform: perspective(400px) rotateX(0deg) rotateY(0deg)
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>
