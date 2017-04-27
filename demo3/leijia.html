@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>累加1</title>
+    <style>
+        body{text-align:center;}
+        input{font:12px arial;cursor:pointer;padding:0 10px;}
+    </style>
+</head>
+<body>
+<input type="button" value="0" />
+</body>
+<script>
+    var btn=document.getElementsByTagName("input")[0]
+    var n=0;
+    btn.onclick=function () {
+        btn.value= ++n;
+    }
+</script>
+</html>
