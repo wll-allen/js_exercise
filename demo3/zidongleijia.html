@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打开页面自动累加</title>
+    <style>
+        body{text-align:center;font:700 30px/1.5 arial;}
+    </style>
+</head>
+<body>
+
+</body>
+<script>
+    window.onload = function ()
+    {
+        var i=0;
+        var bodys=document.body
+        bodys.innerHTML=0;
+       setInterval(addgo,500)
+        function addgo() {
+            ++i;
+            bodys.innerHTML=i
+        }
+    }
+
+</script>
+</html>
