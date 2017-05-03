@@ -104,6 +104,9 @@
                             break;
                     default:
                         s && (aInput.value = 0, oFormula.value = "", s = false);
+                        //如果输入的长度下于10 那么进行填数
+                        //上文本框的数值=现在的数字与输入的新数字进行拼接
+                        //$1匹配的内容是第一个括号中的内容
                         aInput.value.length < 10 && (aInput.value = (aInput.value + this.innerHTML).replace(/^[0\%\/\*\-\+](\d)/,"$1"));
                 }
             }
